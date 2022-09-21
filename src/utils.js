@@ -51,25 +51,37 @@ const argumentError = ({ expected = '', received, extraInfo = '' }) => {
   try {
     return new TypeError(`${'You should provide ' + expected}${'\n' + extraInfo}${'\nReceived: ' + JSON.stringify(received)}`)
   } catch (err) {
-    if (err.message === 'Converting circular structure to JSON') {
+    if (err.message.includes('Converting circular structure to JSON')) {
       return new TypeError(`${'You should provide ' + expected}${'\n' + extraInfo}${'\nReceived a circular structure: ' + received}`)
     }
     throw err
   }
 }
 
+const getLocalhostPath = function () {
+  if (window.location.protocol === 'file:') {
+    const {pathname} = window.location
+    return `file://${pathname.replace(/\/[^/]+\.html/i, '')}`
+  }
+  return window.location.origin
+}
+
 // Response builder
-const makeResponse = work => `
+const makeResponse = work => {
+  const locationPath = getLocalhostPath()
+  return `
+  const action = ${work}
+  self.__path = '${locationPath}'
   self.onmessage = function(event) {
     const args = event.data.message.args
-    if (args) {
-      self.postMessage((${work}).apply(null, args))
-      return close()
-    }
-    self.postMessage((${work})())
+    self.postMessage(action.apply(null, args))
     return close()
   }
+  self.onerror = function(event) {
+      return close()
+  }
 `
+}
 
 export {
   makeResponse,

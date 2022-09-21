@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../dist/sww.min.js" rel="script"></script>
+</head>
+<body>
+</body>
+<script>
+  const simpleWorker = WorkerWrapper.create([{
+    message: '123',
+    func: function (a) {
+      console.log(123, a)
+      console.log(self.__path)
+    }
+  }])
+  simpleWorker.postMessage('123', [])
+</script>
+</html>

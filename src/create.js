@@ -16,6 +16,7 @@ export const create = (actions = []) => {
   if (isValid(actions)('actionsArray')) {
     return {
       actions: actions,
+      getAction: name => actions.find(action => action.message === name),
       postMessage: post(actions),
       postAll: postAll,
       register: register(actions),
