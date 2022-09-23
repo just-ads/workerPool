@@ -1,4 +1,11 @@
 /* global describe, test, expect */
+const localhostPath = (function () {
+  if (window.location.protocol === 'file:') {
+    const {pathname} = window.location
+    return `file://${pathname.replace(/\/[^/]+\.html/i, '')}`
+  }
+  return window.location.origin
+})()
 
 export default (utilsModule) => {
   describe('utils - Correct use cases.\n  Utils:', () => {
@@ -6,14 +13,15 @@ export default (utilsModule) => {
       test('with an arrow function', () => {
         const actual = utilsModule.makeResponse(() => 'a')
         const expected = `
+  const action = function () {return 'a';}
+  self.__path = '${localhostPath}'
   self.onmessage = function(event) {
     const args = event.data.message.args
-    if (args) {
-      self.postMessage((function () {return 'a';}).apply(null, args))
-      return close()
-    }
-    self.postMessage((function () {return 'a';})())
+    self.postMessage(action.apply(null, args))
     return close()
+  }
+  self.onerror = function(event) {
+      return close()
   }
 `
         expect(actual).toBe(expected)
@@ -22,14 +30,15 @@ export default (utilsModule) => {
       test('with a function expression', () => {
         const actual = utilsModule.makeResponse(function () { return 'a' })
         const expected = `
+  const action = function () {return 'a';}
+  self.__path = '${localhostPath}'
   self.onmessage = function(event) {
     const args = event.data.message.args
-    if (args) {
-      self.postMessage((function () {return 'a';}).apply(null, args))
-      return close()
-    }
-    self.postMessage((function () {return 'a';})())
+    self.postMessage(action.apply(null, args))
     return close()
+  }
+  self.onerror = function(event) {
+      return close()
   }
 `
         expect(actual).toBe(expected)

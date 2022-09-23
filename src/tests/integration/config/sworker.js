@@ -98,16 +98,26 @@ var argumentError = function argumentError(_ref) {
   try {
     return new TypeError('' + ('You should provide ' + expected) + ('\n' + extraInfo) + ('\nReceived: ' + JSON.stringify(received)));
   } catch (err) {
-    if (err.message === 'Converting circular structure to JSON') {
+    if (err.message.includes('Converting circular structure to JSON')) {
       return new TypeError('' + ('You should provide ' + expected) + ('\n' + extraInfo) + ('\nReceived a circular structure: ' + received));
     }
     throw err;
   }
 };
 
+var getLocalhostPath = function getLocalhostPath() {
+  if (window.location.protocol === 'file:') {
+    var pathname = window.location.pathname;
+
+    return 'file://' + pathname.replace(/\/[^/]+\.html/i, '');
+  }
+  return window.location.origin;
+};
+
 // Response builder
 var makeResponse = function makeResponse(work) {
-  return '\n  self.onmessage = event => {\n    const args = event.data.message.args\n    if (args) {\n      self.postMessage((' + work + ').apply(null, args))\n      return close()\n    }\n    self.postMessage((' + work + ')())\n    return close()\n  }\n';
+  var locationPath = getLocalhostPath();
+  return '\n  const action = ' + work + '\n  self.__path = \'' + locationPath + '\'\n  self.onmessage = function(event) {\n    const args = event.data.message.args\n    self.postMessage(action.apply(null, args))\n    return close()\n  }\n  self.onerror = function(event) {\n      return close()\n  }\n';
 };
 
 var createDisposableWorker = function createDisposableWorker(response) {
@@ -123,6 +133,7 @@ var createDisposableWorker = function createDisposableWorker(response) {
       };
       worker.onerror = function (e) {
         console.error('Error: Line ' + e.lineno + ' in ' + e.filename + ': ' + e.message);
+        URL.revokeObjectURL(objectURL);
         reject(e);
       };
       worker.postMessage({ message: message });
@@ -327,6 +338,11 @@ var create = function create() {
   if (isValid(actions)('actionsArray')) {
     return {
       actions: actions,
+      getAction: function getAction(name) {
+        return actions.find(function (action) {
+          return action.message === name;
+        });
+      },
       postMessage: post(actions),
       postAll: postAll,
       register: register(actions),

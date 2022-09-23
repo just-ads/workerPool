@@ -11,6 +11,7 @@ export const createDisposableWorker = response => {
       }
       worker.onerror = e => {
         console.error(`Error: Line ${e.lineno} in ${e.filename}: ${e.message}`)
+        URL.revokeObjectURL(objectURL)
         reject(e)
       }
       worker.postMessage({ message })
