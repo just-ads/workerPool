@@ -3,17 +3,61 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <script src="../dist/sww.min.js" rel="script"></script>
+    <script src="../dist/workerPool.js" rel="script"></script>
 </head>
 <body>
+Calculate fibonacci:
+<input type="text" id="input" value="10" />
+<input type="button" id="calculate" value="Calculate">
+
+<p>
+    Try entering values in the range of 10 to 50.
+    Verify that the browser stays responsive when working on a large calculation.
+    We have created 3 workers, so the worker pool will handle a maximum of three
+    tasks at a time. When exceeding this, tasks will be put in a queue.
+</p>
+
+<div id="results"></div>
 </body>
 <script>
-  const simpleWorker = WorkerWrapper.create([{
-    message: '123',
-    func: function (a) {
-      console.log(123, a)
-    }
-  }])
-  simpleWorker.postMessage('123', [])
+  const pool = new WorkerWrapper.WorkerPool();
+  console.log(pool)
+  const fibonacci = function fibonacci(n) {
+    if (n < 2) return n;
+    return fibonacci(n - 2) + fibonacci(n - 1);
+  }
+  const workers = {
+    message: 'fibonacci',
+    func: fibonacci
+  }
+  pool.addWorker(workers)
+
+  const input = document.getElementById('input');
+  const calculate = document.getElementById('calculate');
+  const results = document.getElementById('results');
+
+
+  calculate.onclick = function () {
+    let n = parseInt(input.value);
+    let result = document.createElement('div');
+    result.innerHTML = 'fibonacci(' + n + ') = ... ';
+    results.appendChild(result);
+    const promise = pool.run('fibonacci', [n]);
+    promise.then(res => {
+      result.innerHTML = 'fibonacci(' + n + ') = ' + res;
+    }).catch(err => {
+      result.innerHTML = 'fibonacci(' + n + ') = ' + err;
+    })
+    const a = document.createElement('A');
+    a.innerHTML = 'cancel';
+    a.href = '#';
+    a.onclick = function () {
+      promise.cancel();
+    };
+    result.appendChild(a);
+  }
+
+
+
 </script>
 </html>

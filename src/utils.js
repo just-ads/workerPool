@@ -58,15 +58,15 @@ const argumentError = ({ expected = '', received, extraInfo = '' }) => {
   }
 }
 
-const getLocalhostPath = function () {
+// Response builder
+const getLocalhostPath = () => {
   if (window.location.protocol === 'file:') {
-    const {pathname} = window.location
+    const { pathname } = window.location
     return `file://${pathname.replace(/\/[^/]+\.html/i, '')}`
   }
   return window.location.origin
 }
 
-// Response builder
 const makeResponse = work => {
   const locationPath = getLocalhostPath()
   return `
@@ -83,8 +83,19 @@ const makeResponse = work => {
 `
 }
 
+// utils
+const extend = function (target) {
+  for (let i = 1; i < arguments.length; i++) {
+    const arg = arguments[i]
+    for (const k in arg) {
+      if (arg.hasOwnProperty(k) && !target[k]) target[k] = arg[k]
+    }
+  }
+}
+
 export {
   makeResponse,
   argumentError,
-  isValid
+  isValid,
+  extend
 }

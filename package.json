@@ -1,14 +1,14 @@
 {
-  "name": "simple-web-worker",
+  "name": "simple-web-worker-pool",
   "version": "1.2.0",
-  "description": "An utility to simplify the use of web workers.",
-  "main": "dist/sww.min.js",
+  "description": "An utility to simplify the use of web workers pool.",
+  "main": "dist/workerPool.js",
   "scripts": {
     "preintegration": "cross-env NODE_ENV=production rollup --config src/tests/integration/config/rollup.sworker.js",
     "integration": "testcafe firefox src/tests/integration/*.test.js",
-    "test": "jest",
+    "test": "jest --coverage",
     "build": "yarn test && cross-env NODE_ENV=production rollup -c",
-    "dev": "rollup -c -w"
+    "dev": "cross-env NODE_ENV=production rollup -c"
   },
   "repository": {
     "type": "git",
@@ -16,15 +16,15 @@
   },
   "keywords": [
     "Web",
-    "Worker",
+    "Worker pool",
     "Simple"
   ],
   "author": "Israel Sant'Anna <israel.santanna@gmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/israelss/simple-web-worker/issues"
+    "url": "https://github.com/PZD2937/simple-web-worker/issues"
   },
-  "homepage": "https://github.com/israelss/simple-web-worker#readme",
+  "homepage": "https://github.com/PZD2937/simple-web-worker#readme",
   "devDependencies": {
     "babel-jest": "^20.0.3",
     "babel-plugin-external-helpers": "^6.22.0",

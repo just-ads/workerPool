@@ -1,4 +1,4 @@
-import { create } from './create'
+import { WorkerPool } from './WorkerPool'
 import { run } from './run'
 
 const createWrapper = () => {
@@ -10,7 +10,7 @@ const createWrapper = () => {
     console.error('This browser does not have URL.createObjectURL method.')
     return null
   }
-  return { create, run }
+  return { WorkerPool, run }
 }
 
 const WorkerWrapper = createWrapper()

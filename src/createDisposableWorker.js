@@ -16,5 +16,9 @@ export const createDisposableWorker = response => {
       }
       worker.postMessage({ message })
     })
+  worker.cancel = function () {
+    worker.terminate()
+    URL.revokeObjectURL(objectURL)
+  }
   return worker
 }

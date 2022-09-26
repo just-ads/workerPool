@@ -12,6 +12,6 @@ export default {
     uglify(),
     filesize()
   ],
-  dest: 'dist/sww.min.js',
+  dest: 'dist/workerPool.js',
   sourceMap: true
 }
