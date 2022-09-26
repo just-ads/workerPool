@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1664185250415" clover="3.2.0">
+  <project timestamp="1664185250415" name="All files">
+    <metrics statements="168" coveredstatements="55" conditionals="96" coveredconditionals="44" methods="57" coveredmethods="27" elements="321" coveredelements="126" complexity="0" loc="168" ncloc="168" packages="1" files="6" classes="6">
+      <file name="TaskPool.js" path="F:\worker spase\simple-web-worker\src\TaskPool.js">
+        <metrics statements="41" coveredstatements="0" conditionals="16" coveredconditionals="0" methods="11" coveredmethods="0"/>
+        <line num="1" count="0" type="stmt"/>
+        <line num="30" count="0" type="stmt"/>
+        <line num="31" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="32" count="0" type="stmt"/>
+        <line num="33" count="0" type="stmt"/>
+        <line num="34" count="0" type="stmt"/>
+        <line num="35" count="0" type="stmt"/>
+        <line num="38" count="0" type="stmt"/>
+        <line num="39" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="40" count="0" type="stmt"/>
+        <line num="41" count="0" type="stmt"/>
+        <line num="52" count="0" type="stmt"/>
+        <line num="55" count="0" type="stmt"/>
+        <line num="56" count="0" type="stmt"/>
+        <line num="57" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="58" count="0" type="stmt"/>
+        <line num="59" count="0" type="stmt"/>
+        <line num="60" count="0" type="stmt"/>
+        <line num="62" count="0" type="stmt"/>
+        <line num="63" count="0" type="stmt"/>
+        <line num="66" count="0" type="stmt"/>
+        <line num="69" count="0" type="stmt"/>
+        <line num="70" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="71" count="0" type="cond" truecount="0" falsecount="4"/>
+        <line num="73" count="0" type="stmt"/>
+        <line num="74" count="0" type="stmt"/>
+        <line num="76" count="0" type="stmt"/>
+        <line num="78" count="0" type="stmt"/>
+        <line num="79" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="80" count="0" type="stmt"/>
+        <line num="81" count="0" type="stmt"/>
+        <line num="82" count="0" type="stmt"/>
+        <line num="83" count="0" type="stmt"/>
+        <line num="84" count="0" type="stmt"/>
+        <line num="86" count="0" type="stmt"/>
+        <line num="87" count="0" type="stmt"/>
+        <line num="89" count="0" type="stmt"/>
+        <line num="90" count="0" type="stmt"/>
+        <line num="92" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="93" count="0" type="stmt"/>
+        <line num="94" count="0" type="stmt"/>
+      </file>
+      <file name="WorkerPool.js" path="F:\worker spase\simple-web-worker\src\WorkerPool.js">
+        <metrics statements="33" coveredstatements="0" conditionals="20" coveredconditionals="0" methods="9" coveredmethods="0"/>
+        <line num="1" count="0" type="stmt"/>
+        <line num="18" count="0" type="stmt"/>
+        <line num="19" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="20" count="0" type="stmt"/>
+        <line num="21" count="0" type="stmt"/>
+        <line num="24" count="0" type="stmt"/>
+        <line num="27" count="0" type="stmt"/>
+        <line num="28" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="30" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="31" count="0" type="stmt"/>
+        <line num="37" count="0" type="stmt"/>
+        <line num="39" count="0" type="stmt"/>
+        <line num="43" count="0" type="stmt"/>
+        <line num="44" count="0" type="stmt"/>
+        <line num="45" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="46" count="0" type="stmt"/>
+        <line num="47" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="48" count="0" type="stmt"/>
+        <line num="52" count="0" type="stmt"/>
+        <line num="53" count="0" type="stmt"/>
+        <line num="54" count="0" type="stmt"/>
+        <line num="55" count="0" type="stmt"/>
+        <line num="56" count="0" type="cond" truecount="0" falsecount="4"/>
+        <line num="57" count="0" type="stmt"/>
+        <line num="58" count="0" type="stmt"/>
+        <line num="59" count="0" type="stmt"/>
+        <line num="62" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="63" count="0" type="stmt"/>
+        <line num="65" count="0" type="stmt"/>
+        <line num="67" count="0" type="stmt"/>
+        <line num="71" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="72" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="73" count="0" type="stmt"/>
+      </file>
+      <file name="createDisposableWorker.js" path="F:\worker spase\simple-web-worker\src\createDisposableWorker.js">
+        <metrics statements="19" coveredstatements="1" conditionals="2" coveredconditionals="0" methods="6" coveredmethods="0"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="2" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="3" count="0" type="stmt"/>
+        <line num="4" count="0" type="stmt"/>
+        <line num="5" count="0" type="stmt"/>
+        <line num="6" count="0" type="stmt"/>
+        <line num="7" count="0" type="stmt"/>
+        <line num="8" count="0" type="stmt"/>
+        <line num="9" count="0" type="stmt"/>
+        <line num="10" count="0" type="stmt"/>
+        <line num="12" count="0" type="stmt"/>
+        <line num="13" count="0" type="stmt"/>
+        <line num="14" count="0" type="stmt"/>
+        <line num="15" count="0" type="stmt"/>
+        <line num="17" count="0" type="stmt"/>
+        <line num="19" count="0" type="stmt"/>
+        <line num="20" count="0" type="stmt"/>
+        <line num="21" count="0" type="stmt"/>
+        <line num="23" count="0" type="stmt"/>
+      </file>
+      <file name="index.js" path="F:\worker spase\simple-web-worker\src\index.js">
+        <metrics statements="10" coveredstatements="0" conditionals="6" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <line num="1" count="0" type="stmt"/>
+        <line num="3" count="0" type="stmt"/>
+        <line num="4" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="5" count="0" type="stmt"/>
+        <line num="6" count="0" type="stmt"/>
+        <line num="8" count="0" type="cond" truecount="0" falsecount="4"/>
+        <line num="9" count="0" type="stmt"/>
+        <line num="10" count="0" type="stmt"/>
+        <line num="12" count="0" type="stmt"/>
+        <line num="15" count="0" type="stmt"/>
+      </file>
+      <file name="run.js" path="F:\worker spase\simple-web-worker\src\run.js">
+        <metrics statements="16" coveredstatements="12" conditionals="11" coveredconditionals="10" methods="5" coveredmethods="3"/>
+        <line num="4" count="1" type="cond" truecount="1" falsecount="0"/>
+        <line num="5" count="29" type="stmt"/>
+        <line num="6" count="29" type="stmt"/>
+        <line num="7" count="29" type="stmt"/>
+        <line num="8" count="29" type="cond" truecount="4" falsecount="0"/>
+        <line num="9" count="22" type="stmt"/>
+        <line num="10" count="22" type="cond" truecount="1" falsecount="1"/>
+        <line num="11" count="0" type="stmt"/>
+        <line num="12" count="0" type="stmt"/>
+        <line num="14" count="0" type="stmt"/>
+        <line num="18" count="22" type="stmt"/>
+        <line num="19" count="22" type="stmt"/>
+        <line num="21" count="0" type="stmt"/>
+        <line num="24" count="7" type="cond" truecount="2" falsecount="0"/>
+        <line num="25" count="7" type="cond" truecount="2" falsecount="0"/>
+        <line num="27" count="7" type="stmt"/>
+      </file>
+      <file name="utils.js" path="F:\worker spase\simple-web-worker\src\utils.js">
+        <metrics statements="49" coveredstatements="42" conditionals="41" coveredconditionals="34" methods="25" coveredmethods="24"/>
+        <line num="2" count="22" type="stmt"/>
+        <line num="3" count="33" type="cond" truecount="3" falsecount="0"/>
+        <line num="5" count="2" type="stmt"/>
+        <line num="6" count="13" type="cond" truecount="3" falsecount="0"/>
+        <line num="10" count="3" type="stmt"/>
+        <line num="12" count="2" type="stmt"/>
+        <line num="13" count="7" type="cond" truecount="3" falsecount="0"/>
+        <line num="17" count="4" type="stmt"/>
+        <line num="19" count="2" type="cond" truecount="1" falsecount="0"/>
+        <line num="20" count="2" type="stmt"/>
+        <line num="22" count="2" type="stmt"/>
+        <line num="23" count="3" type="stmt"/>
+        <line num="24" count="8" type="stmt"/>
+        <line num="25" count="2" type="stmt"/>
+        <line num="26" count="4" type="stmt"/>
+        <line num="27" count="8" type="stmt"/>
+        <line num="30" count="126" type="stmt"/>
+        <line num="31" count="126" type="cond" truecount="2" falsecount="0"/>
+        <line num="32" count="124" type="cond" truecount="2" falsecount="0"/>
+        <line num="33" count="98" type="cond" truecount="2" falsecount="0"/>
+        <line num="34" count="90" type="cond" truecount="2" falsecount="0"/>
+        <line num="35" count="28" type="cond" truecount="4" falsecount="0"/>
+        <line num="36" count="26" type="cond" truecount="2" falsecount="0"/>
+        <line num="37" count="18" type="stmt"/>
+        <line num="39" count="62" type="cond" truecount="2" falsecount="0"/>
+        <line num="40" count="24" type="stmt"/>
+        <line num="43" count="97" type="cond" truecount="0" falsecount="1"/>
+        <line num="44" count="97" type="cond" truecount="2" falsecount="0"/>
+        <line num="45" count="59" type="cond" truecount="2" falsecount="0"/>
+        <line num="46" count="21" type="stmt"/>
+        <line num="50" count="2" type="cond" truecount="2" falsecount="0"/>
+        <line num="51" count="12" type="stmt"/>
+        <line num="52" count="12" type="stmt"/>
+        <line num="54" count="1" type="cond" truecount="1" falsecount="1"/>
+        <line num="55" count="1" type="stmt"/>
+        <line num="57" count="0" type="stmt"/>
+        <line num="62" count="2" type="stmt"/>
+        <line num="63" count="2" type="cond" truecount="1" falsecount="1"/>
+        <line num="64" count="0" type="stmt"/>
+        <line num="65" count="0" type="stmt"/>
+        <line num="67" count="2" type="stmt"/>
+        <line num="70" count="2" type="stmt"/>
+        <line num="71" count="2" type="stmt"/>
+        <line num="72" count="2" type="stmt"/>
+        <line num="87" count="2" type="stmt"/>
+        <line num="88" count="0" type="stmt"/>
+        <line num="89" count="0" type="stmt"/>
+        <line num="90" count="0" type="stmt"/>
+        <line num="91" count="0" type="cond" truecount="0" falsecount="4"/>
+      </file>
+    </metrics>
+  </project>
+</coverage>

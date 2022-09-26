@@ -1,0 +1,339 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for TaskPool.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="prettify.css" />
+    <link rel="stylesheet" href="base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="index.html">All files</a> TaskPool.js
+    </h1>
+    <div class='clearfix'>
+    </div>
+  </div>
+  <div class='status-line low'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99</td><td class="line-coverage quiet"><span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import { run <span class="cstat-no" title="statement not covered" >} from './run'<span class="cstat-no" title="statement not covered" ></span></span>
+import { extend } from './utils'
+&nbsp;
+const runStateSet = {
+  NOT_STARTED: -1,
+  RUNNING: 0,
+  OVER: 1
+}
+&nbsp;
+const resultSet = {
+  REJECTED: -1,
+  PENDING: 0,
+  RESOLVED: 1
+}
+&nbsp;
+const defaultOptions = {
+  maxTaskNum: 3
+}
+&nbsp;
+function getUuid () {
+  const len = 10
+  const chars = '0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz'.split('')
+  const uuid = []
+  for (let i = 0; i &lt; len; i++) {
+    uuid[i] = chars[Math.random() * 10]
+  }
+  return uuid.join('')
+}
+&nbsp;
+export function TaskPool (optio<span class="cstat-no" title="statement not covered" >ns) {<span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" ><span class="fstat-no" title="function not covered" ></span></span></span></span></span></span></span></span></span></span></span></span></span>
+<span class="cstat-no" title="statement not covered" >  if (!options) <span class="cstat-no" title="statement not covered" >options = {}</span></span>
+<span class="cstat-no" title="statement not covered" >  extend(options, defaultOptions)</span>
+<span class="cstat-no" title="statement not covered" >  this.maxTaskNum = options.maxTaskNum</span>
+<span class="cstat-no" title="statement not covered" >  this._tasks = []</span>
+<span class="cstat-no" title="statement not covered" >  this._runningWorker = 0</span>
+}
+&nbsp;
+<span class="cstat-no" title="statement not covered" >TaskPool.prototype.addTask = <span class="fstat-no" title="function not covered" >fu</span>nction (method, params, resolver) {</span>
+<span class="cstat-no" title="statement not covered" >  if (!(method instanceof Function)) <span class="cstat-no" title="statement not covered" >throw Error('method not a function')</span></span>
+  const id <span class="cstat-no" title="statement not covered" >= 'task_' + getUuid(</span>)
+  const task <span class="cstat-no" title="statement not covered" >= {</span>
+    id,
+    method,
+    params,
+    status: {
+      runStatus: runStateSet.NOT_STARTED,
+      resultStatus: resultSet.PENDING,
+      remove: false
+    },
+    resolver
+  }
+<span class="cstat-no" title="statement not covered" >  this._tasks.push(task)</span>
+&nbsp;
+  function <span class="fstat-no" title="function not covered" >cancel </span>(reject) {
+<span class="cstat-no" title="statement not covered" >    this._removeTask = true</span>
+    const index <span class="cstat-no" title="statement not covered" >= this._tasks.findInde<span class="fstat-no" title="function not covered" >x(</span>task =&gt; task.id<span class="cstat-no" title="statement not covered" > === id)</span></span>
+<span class="cstat-no" title="statement not covered" >    if (index &gt; -1) {</span>
+      const t <span class="cstat-no" title="statement not covered" >= this._tasks[index</span>]
+<span class="cstat-no" title="statement not covered" >      this._tasks.splice(index, 1)</span>
+<span class="cstat-no" title="statement not covered" >      t.status.remove = true</span>
+    }
+<span class="cstat-no" title="statement not covered" >    this._removeTask = false</span>
+<span class="cstat-no" title="statement not covered" >    reject('cancelled')</span>
+  }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >  resolver.promise.cancel = cancel.bind(this, resolver.reject)</span>
+}
+&nbsp;
+<span class="cstat-no" title="statement not covered" >TaskPool.prototype.next = <span class="fstat-no" title="function not covered" >fu</span>nction () {<span class="cstat-no" title="statement not covered" ></span></span>
+<span class="cstat-no" title="statement not covered" >  if (this._tasks.length) {</span>
+<span class="cstat-no" title="statement not covered" >    if (this._removeTask || this._runningWorker &gt;= this.maxTaskNum) {</span>
+      // 一帧判断一次
+<span class="cstat-no" title="statement not covered" >      setTimeout(<span class="fstat-no" title="function not covered" >()</span> =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >        this.next()</span>
+      }, 17)
+<span class="cstat-no" title="statement not covered" >      return</span>
+    }
+    const task <span class="cstat-no" title="statement not covered" >= this._tasks.shift(</span>)
+<span class="cstat-no" title="statement not covered" >    if (task.status.remove) <span class="cstat-no" title="statement not covered" >return</span></span>
+<span class="cstat-no" title="statement not covered" >    task.status.runStatus = runStateSet.RUNNING</span>
+<span class="cstat-no" title="statement not covered" >    this._runningWorker++</span>
+<span class="cstat-no" title="statement not covered" >    run(task.method, task.params, task.resolver).then(res =&gt; {<span class="fstat-no" title="function not covered" ></span></span>
+<span class="cstat-no" title="statement not covered" >      task.resolver.resolve(res)</span>
+<span class="cstat-no" title="statement not covered" >      task.status.resultStatus = resultSet.RESOLVED</span>
+    }).catch(<span class="fstat-no" title="function not covered" >er</span>r =&gt; {
+<span class="cstat-no" title="statement not covered" >      task.resolver.reject(err)</span>
+<span class="cstat-no" title="statement not covered" >      task.status.resultStatus = resultSet.REJECTED</span>
+    }).then(<span class="fstat-no" title="function not covered" >()</span> =&gt; {
+<span class="cstat-no" title="statement not covered" >      task.status.runStatus = runStateSet.OVER</span>
+<span class="cstat-no" title="statement not covered" >      this._runningWorker--</span>
+    })
+<span class="cstat-no" title="statement not covered" >    if (this._tasks.length) {</span>
+<span class="cstat-no" title="statement not covered" >      setTimeout(<span class="fstat-no" title="function not covered" >()</span> =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >        this.next()</span>
+      })
+    }
+  }
+}
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Mon Sep 26 2022 17:40:50 GMT+0800 (中国标准时间)
+</div>
+</div>
+<script src="prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="sorter.js"></script>
+</body>
+</html>

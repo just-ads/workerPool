@@ -1,0 +1,267 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for WorkerPool.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="prettify.css" />
+    <link rel="stylesheet" href="base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="index.html">All files</a> WorkerPool.js
+    </h1>
+    <div class='clearfix'>
+    </div>
+  </div>
+  <div class='status-line low'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75</td><td class="line-coverage quiet"><span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import { Task<span class="cstat-no" title="statement not covered" >Pool } from './TaskPool'<span class="cstat-no" title="statement not covered" ></span></span>
+import { argumentError, isValid, extend } from './utils'
+&nbsp;
+const defaultOptions = {
+  maxWorkers: 3
+}
+&nbsp;
+function deferPromise () {
+  const resolver = {}
+  resolver.promise = new Promise(function (resolve, reject) {
+    resolver.resolve = resolve
+    resolver.reject = reject
+  })
+&nbsp;
+  return resolver
+}
+&nbsp;
+export function WorkerPool (options) {<span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" ><span class="fstat-no" title="function not covered" ><span class="fstat-no" title="function not covered" ></span></span></span></span></span></span></span></span></span></span></span>
+<span class="cstat-no" title="statement not covered" >  if (!options) <span class="cstat-no" title="statement not covered" >options = {}</span></span>
+<span class="cstat-no" title="statement not covered" >  extend(options, defaultOptions)</span>
+<span class="cstat-no" title="statement not covered" >  this._taskPool = new TaskPool({</span>
+    maxTaskNum: options.maxWorkers
+  })
+<span class="cstat-no" title="statement not covered" >  this._workers = []</span>
+}
+&nbsp;
+<span class="cstat-no" title="statement not covered" >WorkerPool.prototype.addWorker = <span class="fstat-no" title="function not covered" >fu</span>nction (workers) {</span>
+<span class="cstat-no" title="statement not covered" >  if (!Array.isArray(workers)) <span class="cstat-no" title="statement not covered" >workers = [workers]</span></span>
+  // console.log({isValid, extend})
+<span class="cstat-no" title="statement not covered" >  if (!isValid(workers)('actionsArray')) {</span>
+<span class="cstat-no" title="statement not covered" >    throw argumentError({</span>
+      expected: 'an array of objects',
+      received: workers,
+      extraInfo: 'Every action should be an object containing two fields:\n* message\n* func'
+    })
+  }
+<span class="cstat-no" title="statement not covered" >  for (let i = 0; i &lt; workers.length; i++) {</span>
+    // const worker
+<span class="cstat-no" title="statement not covered" >    this._workers.push(workers[i])</span>
+  }
+}
+&nbsp;
+<span class="cstat-no" title="statement not covered" >WorkerPool.prototype.removeWorker = <span class="fstat-no" title="function not covered" >fu</span>nction (name) {</span>
+  const validMessage <span class="cstat-no" title="statement not covered" >= isValid(name)('string')</span>
+<span class="cstat-no" title="statement not covered" >  if (!validMessage) <span class="cstat-no" title="statement not covered" >return</span></span>
+  const index <span class="cstat-no" title="statement not covered" >= this._workers.findInde<span class="fstat-no" title="function not covered" >x(</span>w =&gt; w.messa<span class="cstat-no" title="statement not covered" >ge === name)</span></span>
+<span class="cstat-no" title="statement not covered" >  if (index &gt; -1) {</span>
+<span class="cstat-no" title="statement not covered" >    this._workers.splice(index, 1)</span>
+  }
+}
+&nbsp;
+<span class="cstat-no" title="statement not covered" >WorkerPool.prototype.run = <span class="fstat-no" title="function not covered" >fu</span>nction (msg, args) {</span>
+  const validMessage <span class="cstat-no" title="statement not covered" >= isValid(msg)('string')</span>
+  const validArgs <span class="cstat-no" title="statement not covered" >= isValid(args)(['array', 'undefined'])</span>
+  const resolver <span class="cstat-no" title="statement not covered" >= deferPromise(</span>)
+<span class="cstat-no" title="statement not covered" >  if (validMessage &amp;&amp; validArgs) {</span>
+    const work <span class="cstat-no" title="statement not covered" >= this._workers</span>
+      .filt<span class="fstat-no" title="function not covered" >er</span>(({ message }) =&gt; JSON.string<span class="cstat-no" title="statement not covered" >ify(message) <span class="cstat-no" title="statement not covered" ></span>=== JSON.stringify(msg))</span>
+      .m<span class="fstat-no" title="function not covered" >ap</span>(action =&gt; action<span class="cstat-no" title="statement not covered" >.func)</span>
+      .pop()
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    if (!work) {</span>
+<span class="cstat-no" title="statement not covered" >      resolver.reject(`${msg} is not a registered action for this worker`)</span>
+    } else {
+<span class="cstat-no" title="statement not covered" >      this._taskPool.addTask(work, args, resolver)</span>
+      // 触发运行
+<span class="cstat-no" title="statement not covered" >      this._taskPool.next()</span>
+    }
+  }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >  if (!validMessage) <span class="cstat-no" title="statement not covered" >resolver.reject(argumentError({ expected: 'a string', received: msg }))</span></span>
+<span class="cstat-no" title="statement not covered" >  if (!validArgs) <span class="cstat-no" title="statement not covered" >resolver.reject(argumentError({ expected: 'an array', received: args }))</span></span>
+<span class="cstat-no" title="statement not covered" >  return resolver.promise</span>
+}
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Mon Sep 26 2022 17:40:50 GMT+0800 (中国标准时间)
+</div>
+</div>
+<script src="prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="sorter.js"></script>
+</body>
+</html>
