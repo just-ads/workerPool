@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <script src="../dist/workerPool.js" rel="script"></script>
+    <script src="../dist/workerPool.umd.js" rel="script"></script>
 </head>
 <body>
 Calculate fibonacci:
@@ -20,7 +20,7 @@ Calculate fibonacci:
 <div id="results"></div>
 </body>
 <script>
-  const pool = new WorkerWrapper.WorkerPool();
+  const pool = new workerPool.WorkerPool();
   console.log(pool)
   const fibonacci = function fibonacci(n) {
     if (n < 2) return n;

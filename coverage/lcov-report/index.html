@@ -1,28 +1,68 @@
+
 <!doctype html>
 <html lang="en">
+
 <head>
     <title>Code coverage report for All files</title>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="prettify.css" />
     <link rel="stylesheet" href="base.css" />
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <style type='text/css'>
         .coverage-summary .sorter {
             background-image: url(sort-arrow-sprite.png);
         }
     </style>
 </head>
+    
 <body>
 <div class='wrapper'>
-  <div class='pad1'>
-    <h1>
-      All files
-    </h1>
-    <div class='clearfix'>
+    <div class='pad1'>
+        <h1>All files</h1>
+        <div class='clearfix'>
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">94.06% </span>
+                <span class="quiet">Statements</span>
+                <span class='fraction'>713/758</span>
+            </div>
+        
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">95.32% </span>
+                <span class="quiet">Branches</span>
+                <span class='fraction'>204/214</span>
+            </div>
+        
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">55% </span>
+                <span class="quiet">Functions</span>
+                <span class='fraction'>22/40</span>
+            </div>
+        
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">94.06% </span>
+                <span class="quiet">Lines</span>
+                <span class='fraction'>713/758</span>
+            </div>
+        
+            
+        </div>
+        <p class="quiet">
+            Press <em>n</em> or <em>j</em> to go to the next uncovered block, <em>b</em>, <em>p</em> or <em>k</em> for the previous block.
+        </p>
+        <template id="filterTemplate">
+            <div class="quiet">
+                Filter:
+                <input oninput="onInput()" type="search" id="fileSearch">
+            </div>
+        </template>
     </div>
-  </div>
-  <div class='status-line low'></div>
-<div class="pad1">
+    <div class='status-line high'></div>
+    <div class="pad1">
 <table class="coverage-summary">
 <thead>
 <tr>
@@ -39,100 +79,68 @@
 </tr>
 </thead>
 <tbody><tr>
-	<td class="file low" data-value="TaskPool.js"><a href="TaskPool.js.html">TaskPool.js</a></td>
-	<td data-value="" class="pic low"><div class="chart"><div class="cover-fill" style="width: 0%;"></div><div class="cover-empty" style="width:100%;"></div></div></td>
-	<td data-value="" class="pct low">%</td>
-	<td data-value="" class="abs low">/</td>
-	<td data-value="" class="pct low">%</td>
-	<td data-value="" class="abs low">/</td>
-	<td data-value="" class="pct low">%</td>
-	<td data-value="" class="abs low">/</td>
-	<td data-value="" class="pct low">%</td>
-	<td data-value="" class="abs low">/</td>
+	<td class="file medium" data-value="src"><a href="src/index.html">src</a></td>
+	<td data-value="72.9" class="pic medium">
+	<div class="chart"><div class="cover-fill" style="width: 72%"></div><div class="cover-empty" style="width: 28%"></div></div>
+	</td>
+	<td data-value="72.9" class="pct medium">72.9%</td>
+	<td data-value="155" class="abs medium">113/155</td>
+	<td data-value="90.54" class="pct high">90.54%</td>
+	<td data-value="74" class="abs high">67/74</td>
+	<td data-value="85" class="pct high">85%</td>
+	<td data-value="20" class="abs high">17/20</td>
+	<td data-value="72.9" class="pct medium">72.9%</td>
+	<td data-value="155" class="abs medium">113/155</td>
 	</tr>
 
 <tr>
-	<td class="file low" data-value="WorkerPool.js"><a href="WorkerPool.js.html">WorkerPool.js</a></td>
-	<td data-value="" class="pic low"><div class="chart"><div class="cover-fill" style="width: 0%;"></div><div class="cover-empty" style="width:100%;"></div></div></td>
-	<td data-value="" class="pct low">%</td>
-	<td data-value="" class="abs low">/</td>
-	<td data-value="" class="pct low">%</td>
-	<td data-value="" class="abs low">/</td>
-	<td data-value="" class="pct low">%</td>
-	<td data-value="" class="abs low">/</td>
-	<td data-value="" class="pct low">%</td>
-	<td data-value="" class="abs low">/</td>
+	<td class="file high" data-value="src/tests/unit/ModuleRun"><a href="src/tests/unit/ModuleRun/index.html">src/tests/unit/ModuleRun</a></td>
+	<td data-value="100" class="pic high">
+	<div class="chart"><div class="cover-fill cover-full" style="width: 100%"></div><div class="cover-empty" style="width: 0%"></div></div>
+	</td>
+	<td data-value="100" class="pct high">100%</td>
+	<td data-value="253" class="abs high">253/253</td>
+	<td data-value="97.53" class="pct high">97.53%</td>
+	<td data-value="81" class="abs high">79/81</td>
+	<td data-value="75" class="pct medium">75%</td>
+	<td data-value="4" class="abs medium">3/4</td>
+	<td data-value="100" class="pct high">100%</td>
+	<td data-value="253" class="abs high">253/253</td>
 	</tr>
 
 <tr>
-	<td class="file low" data-value="createDisposableWorker.js"><a href="createDisposableWorker.js.html">createDisposableWorker.js</a></td>
-	<td data-value="" class="pic low"><div class="chart"><div class="cover-fill" style="width: 0%;"></div><div class="cover-empty" style="width:100%;"></div></div></td>
-	<td data-value="" class="pct low">%</td>
-	<td data-value="" class="abs low">/</td>
-	<td data-value="" class="pct low">%</td>
-	<td data-value="" class="abs low">/</td>
-	<td data-value="" class="pct low">%</td>
-	<td data-value="" class="abs low">/</td>
-	<td data-value="" class="pct low">%</td>
-	<td data-value="" class="abs low">/</td>
-	</tr>
-
-<tr>
-	<td class="file low" data-value="index.js"><a href="index.js.html">index.js</a></td>
-	<td data-value="" class="pic low"><div class="chart"><div class="cover-fill" style="width: 0%;"></div><div class="cover-empty" style="width:100%;"></div></div></td>
-	<td data-value="" class="pct low">%</td>
-	<td data-value="" class="abs low">/</td>
-	<td data-value="" class="pct low">%</td>
-	<td data-value="" class="abs low">/</td>
-	<td data-value="" class="pct low">%</td>
-	<td data-value="" class="abs low">/</td>
-	<td data-value="" class="pct low">%</td>
-	<td data-value="" class="abs low">/</td>
-	</tr>
-
-<tr>
-	<td class="file medium" data-value="run.js"><a href="run.js.html">run.js</a></td>
-	<td data-value="" class="pic medium"><div class="chart"><div class="cover-fill" style="width: 0%;"></div><div class="cover-empty" style="width:100%;"></div></div></td>
-	<td data-value="" class="pct medium">%</td>
-	<td data-value="" class="abs medium">/</td>
-	<td data-value="" class="pct high">%</td>
-	<td data-value="" class="abs high">/</td>
-	<td data-value="" class="pct medium">%</td>
-	<td data-value="" class="abs medium">/</td>
-	<td data-value="" class="pct medium">%</td>
-	<td data-value="" class="abs medium">/</td>
-	</tr>
-
-<tr>
-	<td class="file high" data-value="utils.js"><a href="utils.js.html">utils.js</a></td>
-	<td data-value="" class="pic high"><div class="chart"><div class="cover-fill" style="width: 0%;"></div><div class="cover-empty" style="width:100%;"></div></div></td>
-	<td data-value="" class="pct high">%</td>
-	<td data-value="" class="abs high">/</td>
-	<td data-value="" class="pct high">%</td>
-	<td data-value="" class="abs high">/</td>
-	<td data-value="" class="pct high">%</td>
-	<td data-value="" class="abs high">/</td>
-	<td data-value="" class="pct high">%</td>
-	<td data-value="" class="abs high">/</td>
+	<td class="file high" data-value="src/tests/unit/ModuleUtils"><a href="src/tests/unit/ModuleUtils/index.html">src/tests/unit/ModuleUtils</a></td>
+	<td data-value="99.14" class="pic high">
+	<div class="chart"><div class="cover-fill" style="width: 99%"></div><div class="cover-empty" style="width: 1%"></div></div>
+	</td>
+	<td data-value="99.14" class="pct high">99.14%</td>
+	<td data-value="350" class="abs high">347/350</td>
+	<td data-value="98.3" class="pct high">98.3%</td>
+	<td data-value="59" class="abs high">58/59</td>
+	<td data-value="12.5" class="pct low">12.5%</td>
+	<td data-value="16" class="abs low">2/16</td>
+	<td data-value="99.14" class="pct high">99.14%</td>
+	<td data-value="350" class="abs high">347/350</td>
 	</tr>
 
 </tbody>
 </table>
-</div><div class='push'></div><!-- for sticky footer -->
-</div><!-- /wrapper -->
-<div class='footer quiet pad2 space-top1 center small'>
-  Code coverage
-  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Mon Sep 26 2022 17:40:50 GMT+0800 (中国标准时间)
 </div>
-</div>
-<script src="prettify.js"></script>
-<script>
-window.onload = function () {
-        if (typeof prettyPrint === 'function') {
-            prettyPrint();
-        }
-};
-</script>
-<script src="sorter.js"></script>
-</body>
+                <div class='push'></div><!-- for sticky footer -->
+            </div><!-- /wrapper -->
+            <div class='footer quiet pad2 space-top1 center small'>
+                Code coverage generated by
+                <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
+                at 2022-10-21T10:02:13.135Z
+            </div>
+        <script src="prettify.js"></script>
+        <script>
+            window.onload = function () {
+                prettyPrint();
+            };
+        </script>
+        <script src="sorter.js"></script>
+        <script src="block-navigation.js"></script>
+    </body>
 </html>
+    

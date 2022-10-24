@@ -13,7 +13,9 @@ export default (utilsModule) => {
       test('with an arrow function', () => {
         const actual = utilsModule.makeResponse(() => 'a')
         const expected = `
-  const action = function () {return 'a';}
+  const action = function () {
+          return 'a';
+        }
   self.__path = '${localhostPath}'
   self.onmessage = function(event) {
     const args = event.data.message.args
@@ -30,7 +32,9 @@ export default (utilsModule) => {
       test('with a function expression', () => {
         const actual = utilsModule.makeResponse(function () { return 'a' })
         const expected = `
-  const action = function () {return 'a';}
+  const action = function () {
+          return 'a';
+        }
   self.__path = '${localhostPath}'
   self.onmessage = function(event) {
     const args = event.data.message.args
